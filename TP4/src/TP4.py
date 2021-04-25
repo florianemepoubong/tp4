@@ -42,8 +42,9 @@ plt.show()
 
 # In[7]:
 # Description de données sur la colonne 'Arrondissement / Ville liée'
-df_group_by_date = df['Arrondissement / Ville liée'].describe()
-print(df_group_by_date)
+df_group_by_arrondissement = df['Arrondissement / Ville liée'].describe()
+
+print(df_group_by_arrondissement)
 
 # In[8]:
 # Données agrégées sur le statut de commerce par arrondissement
@@ -51,9 +52,9 @@ df['Arrondissement / Ville liée'].value_counts()
 
 # In[9]:
 # Données agrégées sur le statut de commerce par ville
-df_group_by_date = df.groupby(['Arrondissement / Ville liée','Statut du commerce'])['Statut du commerce'].count()
+df_group_by_ville = df.groupby(['Arrondissement / Ville liée','Statut du commerce'])['Statut du commerce'].count()
 
-print(df_group_by_date)
+print(df_group_by_ville)
 
 # In[27]:
 # Données agrégées sur le statut de commerce par date
@@ -88,7 +89,7 @@ df = pd.read_csv('../data/j_informe_les_commercants.csv', sep = ',')
 #fig, ax = plt.subplots(figsize=(15,7))
 #df_group_by_date = df.groupby(['Statut du commerce',"Intérêt pour le programme d'accompagnement pour le virage numérique des entreprises?"])['Statut du commerce'].count().unstack().plot(ax=ax)
 #Affichage du diagramme à barre pour mieux visualiser 
-df_group_by_date = df.groupby(["Statut du commerce","Intérêt pour le programme d'accompagnement pour le virage numérique des entreprises?"])["Statut du commerce"].count().unstack(0).plot.barh()
+df_group_by_interet_numerique = df.groupby(["Statut du commerce","Intérêt pour le programme d'accompagnement pour le virage numérique des entreprises?"])["Statut du commerce"].count().unstack(0).plot.barh()
 plt.show()
 
 # In[14]:
@@ -97,8 +98,8 @@ plt.show()
 df = pd.read_csv('../data/j_informe_les_commercants.csv', sep = ',')
 #fig, ax = plt.subplots(figsize=(15,7))
 #df_group_by_date = df.groupby(['Statut du commerce',"Intérêt pour le programme d'accompagnement pour le virage numérique des entreprises?"])['Statut du commerce'].count().unstack().plot(ax=ax)
-df_group_by_date = df.groupby(["Statut du commerce",'Canal de vente en ligne'])['Statut du commerce'].count()
-print(df_group_by_date)
+df_group_by_canal_vente = df.groupby(["Statut du commerce",'Canal de vente en ligne'])['Statut du commerce'].count()
+print(df_group_by_canal_vente)
 
 # In[15]:
 
@@ -106,8 +107,8 @@ print(df_group_by_date)
 df = pd.read_csv('../data/j_informe_les_commercants.csv', sep = ',')
 #fig, ax = plt.subplots(figsize=(15,7))
 #df_group_by_date = df.groupby(['Statut du commerce',"Intérêt pour le programme d'accompagnement pour le virage numérique des entreprises?"])['Statut du commerce'].count().unstack().plot(ax=ax)
-df_group_by_date = df.groupby(["Faites-vous de la vente en ligne?",'Canal de vente en ligne'])['Faites-vous de la vente en ligne?'].count()
-print(df_group_by_date)
+df_group_by_canal_ligne = df.groupby(["Faites-vous de la vente en ligne?",'Canal de vente en ligne'])['Faites-vous de la vente en ligne?'].count()
+print(df_group_by_canal_ligne)
 
 # In[75]:
 
@@ -160,7 +161,7 @@ plt.show()
 df = pd.read_csv('../data/j_informe_les_commercants.csv', sep = ',')
 #fig, ax = plt.subplots(figsize=(15,7))
 #df_group_by_date = df.groupby(['Statut du commerce',"Intérêt pour le programme d'accompagnement pour le virage numérique des entreprises?"])['Statut du commerce'].count().unstack().plot(ax=ax)
-df_group_by_date = df.groupby(['Enjeux: Soutien financier?','Statut du commerce'])['Enjeux: Soutien financier?'].count().unstack(0).plot.barh()
+df_group_by_enjeux = df.groupby(['Enjeux: Soutien financier?','Statut du commerce'])['Enjeux: Soutien financier?'].count().unstack(0).plot.barh()
 plt.show()
 
 # In[74]:
