@@ -1,3 +1,8 @@
+#Desciption des données analysées
+
+Le fichier analysé ci-contre « j’informe les commerçants », des données ouvertes de la ville de Montréal, présente les résultats du sondage effectué par les employés de la ville de Montréal auprès des commerces de la ville de Montréal pendant la première phase de la Covid en avril 2020. Ce sondage consistait surtout à recueillir des informations sur les commerces et l’impact de la pandémie sur leurs activités et surtout à les informer du programme d’urgence de soutien aux commerces mis en place par la ville de Montreal pendant la Covid, et partager des informations susceptibles de les aider à s’adapter à la situation. Il ressort de l’analyse statistique effectuée sous la base de données agrégés et de graphiques générés, que plusieurs commerces ont pu survivre et garder leurs portes ouvertes pendant la pandémie, d’autres ont dû fermés leurs portes. Plusieurs de ces commerces ont signifiés avoir des enjeux de santé et sécurité à gérer, et ont démontré un intérêt certain pour le programme d’aide d’urgence, le soutien financier et d’autres initiatives de la ville tel que démontre les tableaux agrégés et graphiques de corrélations sur les centres d’intérêts des commerces relativement à leurs réponses sur les enjeux sur lesquels ils ont été interrogés.
+
+
 ```python
 """
 Importation de librairies
